@@ -1,11 +1,9 @@
-function getFormvalue() {
-    // Get form by ID
-    var form = document.getElementById('form1');
-    
-    // Get first and last name values
-    var firstName = form.elements['fname'].value;
-    var lastName = form.elements['lname'].value;
-    
-    // Display alert with full name
-    alert(firstName + " " + lastName);
+function getFormValue() {
+	const form = document.getElementById("form1");
+
+	const formData = new FormData(form);
+	const firstName = formData.get('fname');
+	const lastName = formData.get('lname');
+
+	alert(firstName + " " + lastName)
 }
